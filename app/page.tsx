@@ -14,7 +14,7 @@ export default function Home() {
           Digital Handbook
         </h2>
         <p className="text-lg text-whitman-gray max-w-3xl">
-          Your central hub for resources, policies, and services from Whitman College's Division of Inclusive Excellence. 
+          Your central hub for resources, policies, and services from Whitman College&apos;s Division of Inclusive Excellence. 
           Find what you need quickly and easily.
         </p>
       </div>
