@@ -9,6 +9,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return tools.map((tool) => ({
+    slug: tool.slug,
+  }));
+}
+
 export default function ToolDetailPage({ params }: PageProps) {
   const tool = tools.find(t => t.slug === params.slug);
 

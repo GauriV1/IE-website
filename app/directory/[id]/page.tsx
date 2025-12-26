@@ -9,6 +9,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return people.map((person) => ({
+    id: person.id,
+  }));
+}
+
 export default function PersonDetailPage({ params }: PageProps) {
   const person = people.find(p => p.id === params.id);
 

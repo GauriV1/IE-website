@@ -10,6 +10,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return teams.map((team) => ({
+    slug: team.slug,
+  }));
+}
+
 export default function TeamDetailPage({ params }: PageProps) {
   const team = teams.find(t => t.slug === params.slug);
 

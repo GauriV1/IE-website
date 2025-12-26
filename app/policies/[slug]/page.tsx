@@ -10,6 +10,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return policies.map((policy) => ({
+    slug: policy.slug,
+  }));
+}
+
 export default function PolicyDetailPage({ params }: PageProps) {
   const policy = policies.find(p => p.slug === params.slug);
 

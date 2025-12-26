@@ -9,6 +9,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return newsItems.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
 export default function NewsDetailPage({ params }: PageProps) {
   const item = newsItems.find(n => n.slug === params.slug);
 

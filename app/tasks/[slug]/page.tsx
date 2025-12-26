@@ -10,6 +10,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return tasks.map((task) => ({
+    slug: task.slug,
+  }));
+}
+
 export default function TaskDetailPage({ params }: PageProps) {
   const task = tasks.find(t => t.slug === params.slug);
 
