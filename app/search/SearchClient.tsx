@@ -1,27 +1,43 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Tabs from '@/components/Tabs';
 import { ContentPage, Person } from '@/lib/content/types';
 
-interface SearchClientProps {
-  allResults: {
+export default function SearchClient() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get('q') || '';
+  const [activeTab, setActiveTab] = useState('all');
+  const [allResults, setAllResults] = useState<{
     tasks: ContentPage[];
     policies: ContentPage[];
     tools: ContentPage[];
     people: Person[];
     news: ContentPage[];
-  };
-}
+  }>({
+    tasks: [],
+    policies: [],
+    tools: [],
+    people: [],
+    news: [],
+  });
 
-export default function SearchClient({ allResults }: SearchClientProps) {
-  const searchParams = useSearchParams();
-  const query = searchParams.get('q') || '';
-  const [activeTab, setActiveTab] = useState('all');
+  // Load content on client side for static export
+  useEffect(() => {
+    // For static export, we'll need to fetch content data
+    // This is a placeholder - in production, you'd load from a JSON file or API
+    setAllResults({
+      tasks: [],
+      policies: [],
+      tools: [],
+      people: [],
+      news: [],
+    });
+  }, []);
 
   const tabs = [
     { id: 'all', label: 'All' },

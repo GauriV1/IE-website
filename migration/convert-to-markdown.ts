@@ -33,7 +33,7 @@ function createTurndownService(): TurndownService {
 
   // Custom rules
   turndownService.addRule('strikethrough', {
-    filter: ['del', 's', 'strike'],
+    filter: ['del', 's', 'strike' as any],
     replacement: (content) => `~~${content}~~`,
   });
 

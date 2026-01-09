@@ -29,7 +29,7 @@ export default function TaskDetailPage({ params }: PageProps) {
   const relatedPolicies = task.frontmatter.relatedPolicies
     ? task.frontmatter.relatedPolicies
         .map(slug => getContentPage('policies', slug))
-        .filter(Boolean)
+        .filter((policy): policy is NonNullable<typeof policy> => policy !== null)
     : [];
 
   return (

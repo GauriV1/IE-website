@@ -7,7 +7,7 @@ export default function ToolsPage() {
   
   // Extract unique types from tools
   const toolTypes = Array.from(new Set(
-    tools.map(t => t.frontmatter.type).filter(Boolean)
+    tools.map(t => t.frontmatter.type).filter((type): type is string => Boolean(type))
   ));
 
   return (
