@@ -1,0 +1,129 @@
+{
+  "total": 20,
+  "downloaded": 0,
+  "failed": 0,
+  "skipped": 20,
+  "assets": [
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/61a34c68-38b3-430b-bafd-c9516380f1cf/1_jpeg.png",
+      "localPath": "/assets/migrated/1_jpeg.png",
+      "filename": "1_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/60eaa7a8-e06b-4df1-9dd2-9b58c700f61c/2_jpeg.png",
+      "localPath": "/assets/migrated/2_jpeg.png",
+      "filename": "2_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/c1b52228-b772-4b49-a621-5c2ee9004fd7/3_jpeg.png",
+      "localPath": "/assets/migrated/3_jpeg.png",
+      "filename": "3_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/43569915-f4a8-43b7-b276-ae87ea6ac0b1/4_jpeg.png",
+      "localPath": "/assets/migrated/4_jpeg.png",
+      "filename": "4_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/715241b9-cdf0-42df-bd6d-0d36cf68225b/5_jpeg.png",
+      "localPath": "/assets/migrated/5_jpeg.png",
+      "filename": "5_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/6612aaf3-d0b6-491f-ac36-dc4088efb2ca/6_jpeg.png",
+      "localPath": "/assets/migrated/6_jpeg.png",
+      "filename": "6_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/91bfffa2-c108-4d00-8d17-dbb9253948a0/7_jpeg.png",
+      "localPath": "/assets/migrated/7_jpeg.png",
+      "filename": "7_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/57801967-1d30-4b09-b8d2-880d1cd79f5f/8_jpeg.png",
+      "localPath": "/assets/migrated/8_jpeg.png",
+      "filename": "8_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/41b8ef95-a50c-4e97-8de8-e2e89f95fbda/Free+Speech+%26+Inclusion+On+Campus.jpeg",
+      "localPath": "/assets/migrated/free_speech__26_inclusion_on_campus.jpeg",
+      "filename": "free_speech__26_inclusion_on_campus.jpeg",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/92c33250-6168-401f-bb86-719617253566/Facilitating+Political+Discussions.jpeg",
+      "localPath": "/assets/migrated/facilitating_political_discussions.jpeg",
+      "filename": "facilitating_political_discussions.jpeg",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/02a92960-8d26-42cc-b314-9ed0c97da828/Maintaining+Campus+Community.jpeg",
+      "localPath": "/assets/migrated/maintaining_campus_community.jpeg",
+      "filename": "maintaining_campus_community.jpeg",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/d523ff13-097b-450f-a676-f6b56b8ec1dd/book+cover.jpg",
+      "localPath": "/assets/migrated/book_cover.jpg",
+      "filename": "book_cover.jpg",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/7c7a7947-c74d-49a9-aff2-5298bc65cf21/DEIA+Maturity+Matrix+jpeg.png",
+      "localPath": "/assets/migrated/deia_maturity_matrix_jpeg.png",
+      "filename": "deia_maturity_matrix_jpeg.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/37372243-94a2-4c8e-8942-c1c8bf0412e0/DEIA+Maturity+Matrix+Terminology+Review.png",
+      "localPath": "/assets/migrated/deia_maturity_matrix_terminology_review.png",
+      "filename": "deia_maturity_matrix_terminology_review.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/69c9091d-3d35-4bfa-9e07-f615017090b0/Screen+Shot+2022-08-11+at+6.23.50+AM.png",
+      "localPath": "/assets/migrated/screen_shot_2022-08-11_at_6.23.50_am.png",
+      "filename": "screen_shot_2022-08-11_at_6.23.50_am.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/71a15de1-52ab-4c6d-961c-697749c129b2/Screen+Shot+2022-08-11+at+6.24.23+AM.png",
+      "localPath": "/assets/migrated/screen_shot_2022-08-11_at_6.24.23_am.png",
+      "filename": "screen_shot_2022-08-11_at_6.24.23_am.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/b170b945-c2a3-43f7-9b32-513cc43c6349/Screen+Shot+2022-08-11+at+6.39.55+AM.png",
+      "localPath": "/assets/migrated/screen_shot_2022-08-11_at_6.39.55_am.png",
+      "filename": "screen_shot_2022-08-11_at_6.39.55_am.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/56327951-2840-4ad1-b326-35b1a96c7728/Screen+Shot+2022-08-22+at+2.22.51+PM.png",
+      "localPath": "/assets/migrated/screen_shot_2022-08-22_at_2.22.51_pm.png",
+      "filename": "screen_shot_2022-08-22_at_2.22.51_pm.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/f602fe7f-6d90-4ad2-bb10-bb1a73b306ba/Screenshot+2024-10-23+at+3.10.14%E2%80%AFPM.png",
+      "localPath": "/assets/migrated/screenshot_2024-10-23_at_3.10.14_e2_80_afpm.png",
+      "filename": "screenshot_2024-10-23_at_3.10.14_e2_80_afpm.png",
+      "status": "skipped"
+    },
+    {
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/622b9d5ded3e9810eac7bbe5/87284535-a835-4978-9424-a224a7cd3cbe/23-24+Auto+Liability+Card.png",
+      "localPath": "/assets/migrated/23-24_auto_liability_card.png",
+      "filename": "23-24_auto_liability_card.png",
+      "status": "skipped"
+    }
+  ],
+  "timestamp": "2026-01-09T11:58:54.962Z"
+}

@@ -7,23 +7,52 @@
     "dev:open": "next dev & (sleep 3 && open http://localhost:3000 || true)",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "tsx migration/scripts/index.ts",
+    "migrate:assets": "tsx migration/scripts/migrate-assets-standalone.ts",
+    "deduplicate": "tsx migration/scripts/deduplicate-standalone.ts",
+    "qa": "tsx migration/scripts/qa-standalone.ts",
+    "verify:deployment": "tsx migration/scripts/verify-deployment.ts",
+    "migration:report": "tsx migration/scripts/completion-standalone.ts",
+    "migrate:crawl": "tsx migration/crawl-squarespace.ts",
+    "migrate:convert": "tsx migration/convert-to-markdown.ts",
+    "migrate:download-assets": "tsx migration/download-assets.ts",
+    "migrate:setup-nav": "tsx migration/setup-navigation.ts",
+    "migrate:verify": "tsx migration/verify-migration.ts",
+    "migrate:all": "npm run migrate:crawl && npm run migrate:convert && npm run migrate:download-assets && npm run migrate:setup-nav && npm run migrate:verify",
+    "migrate:discover": "tsx migration/discover-urls.ts",
+    "migrate:crawl-new": "tsx migration/crawl.ts",
+    "migrate:extract": "tsx migration/extract.ts",
+    "migrate:assets-new": "tsx migration/assets.ts",
+    "migrate:copy-only": "npm run migrate:discover && npm run migrate:crawl-new && npm run migrate:extract && npm run migrate:assets-new"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "next": "^14.2.5"
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.19.27",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/turndown": "^5.0.6",
     "autoprefixer": "^10.4.19",
+    "axios": "^1.13.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
+    "playwright": "^1.57.0",
     "postcss": "^8.4.39",
+    "string-similarity": "^4.0.4",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.3"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "turndown": "^7.2.2",
+    "typescript": "^5.5.3",
+    "xml2js": "^0.6.2"
   }
 }
-

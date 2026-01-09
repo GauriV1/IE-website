@@ -1,0 +1,61 @@
+{
+  "tags": [
+    {
+      "id": "hr",
+      "name": "Human Resources",
+      "description": "HR-related content including benefits, time off, and onboarding",
+      "category": "tasks",
+      "color": "#3B82F6"
+    },
+    {
+      "id": "time-off",
+      "name": "Time Off",
+      "description": "Vacation, sick leave, and personal time",
+      "category": "tasks",
+      "color": "#10B981"
+    },
+    {
+      "id": "it",
+      "name": "IT Support",
+      "description": "Technology support and resources",
+      "category": "tasks",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": "facilities",
+      "name": "Facilities",
+      "description": "Building maintenance, room booking, and workspace requests",
+      "category": "tasks",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "description": "Expense reports, budgets, and financial policies",
+      "category": "policies",
+      "color": "#EF4444"
+    },
+    {
+      "id": "policy",
+      "name": "Policy",
+      "description": "Company policies and procedures",
+      "category": "policies",
+      "color": "#6366F1"
+    },
+    {
+      "id": "benefits",
+      "name": "Benefits",
+      "description": "Employee benefits and enrollment",
+      "category": "tasks",
+      "color": "#14B8A6"
+    },
+    {
+      "id": "onboarding",
+      "name": "Onboarding",
+      "description": "New employee onboarding resources",
+      "category": "tasks",
+      "color": "#EC4899"
+    }
+  ]
+}
+

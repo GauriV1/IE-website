@@ -1,0 +1,113 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Johnson",
+    "role": "HR Director",
+    "department": "Human Resources",
+    "email": "sarah.johnson@company.com",
+    "phone": "555-0101",
+    "office": "Building A, Room 201",
+    "tags": ["hr", "leadership"],
+    "team": "human-resources"
+  },
+  {
+    "id": "2",
+    "name": "Mike Chen",
+    "role": "Benefits Manager",
+    "department": "Human Resources",
+    "email": "mike.chen@company.com",
+    "phone": "555-0102",
+    "office": "Building A, Room 202",
+    "tags": ["hr", "benefits"],
+    "team": "human-resources"
+  },
+  {
+    "id": "3",
+    "name": "Emily Rodriguez",
+    "role": "CFO",
+    "department": "Finance",
+    "email": "emily.rodriguez@company.com",
+    "phone": "555-0201",
+    "office": "Building B, Room 301",
+    "tags": ["finance", "leadership"],
+    "team": "finance"
+  },
+  {
+    "id": "4",
+    "name": "David Kim",
+    "role": "Accounting Manager",
+    "department": "Finance",
+    "email": "david.kim@company.com",
+    "phone": "555-0202",
+    "office": "Building B, Room 302",
+    "tags": ["finance"],
+    "team": "finance"
+  },
+  {
+    "id": "5",
+    "name": "Alex Thompson",
+    "role": "IT Director",
+    "department": "Information Technology",
+    "email": "alex.thompson@company.com",
+    "phone": "555-0301",
+    "office": "Building C, Room 401",
+    "tags": ["it", "leadership"],
+    "team": "information-technology"
+  },
+  {
+    "id": "6",
+    "name": "Jordan Lee",
+    "role": "Support Manager",
+    "department": "Information Technology",
+    "email": "jordan.lee@company.com",
+    "phone": "555-0302",
+    "office": "Building C, Room 402",
+    "tags": ["it"],
+    "team": "information-technology"
+  },
+  {
+    "id": "7",
+    "name": "Pat Martinez",
+    "role": "Facilities Manager",
+    "department": "Facilities",
+    "email": "pat.martinez@company.com",
+    "phone": "555-0401",
+    "office": "Building D, Room 101",
+    "tags": ["facilities"],
+    "team": "facilities"
+  },
+  {
+    "id": "8",
+    "name": "Taylor Brown",
+    "role": "Events Coordinator",
+    "department": "Events & Culture",
+    "email": "taylor.brown@company.com",
+    "phone": "555-0501",
+    "office": "Building A, Room 150",
+    "tags": ["events"],
+    "team": "events"
+  },
+  {
+    "id": "9",
+    "name": "Chris Wilson",
+    "role": "Marketing Manager",
+    "department": "Marketing",
+    "email": "chris.wilson@company.com",
+    "phone": "555-0601",
+    "office": "Building B, Room 201",
+    "tags": ["marketing"],
+    "team": "marketing"
+  },
+  {
+    "id": "10",
+    "name": "Morgan Davis",
+    "role": "Sales Director",
+    "department": "Sales",
+    "email": "morgan.davis@company.com",
+    "phone": "555-0701",
+    "office": "Building B, Room 202",
+    "tags": ["sales", "leadership"],
+    "team": "sales"
+  }
+]
+

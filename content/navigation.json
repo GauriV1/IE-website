@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Policies & Resources",
+      "href": "/policies"
+    },
+    {
+      "label": "Tasks & Services",
+      "href": "/tasks"
+    },
+    {
+      "label": "Directory",
+      "href": "/directory"
+    },
+    {
+      "label": "Search",
+      "href": "/search"
+    }
+  ]
+}

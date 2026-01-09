@@ -6,9 +6,19 @@ import Link from 'next/link';
 import Card from '@/components/Card';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Tabs from '@/components/Tabs';
-import { tasks, policies, tools, people, newsItems } from '@/lib/mockData';
+import { ContentPage, Person } from '@/lib/content/types';
 
-export default function SearchContent() {
+interface SearchClientProps {
+  allResults: {
+    tasks: ContentPage[];
+    policies: ContentPage[];
+    tools: ContentPage[];
+    people: Person[];
+    news: ContentPage[];
+  };
+}
+
+export default function SearchClient({ allResults }: SearchClientProps) {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
   const [activeTab, setActiveTab] = useState('all');
@@ -20,26 +30,6 @@ export default function SearchContent() {
     { id: 'howto', label: 'How-To' },
     { id: 'tools', label: 'Tools' },
   ];
-
-  const searchInArray = <T,>(array: T[], query: string, getSearchableText: (item: T) => string) => {
-    if (!query) return [];
-    const lowerQuery = query.toLowerCase();
-    return array.filter(item => 
-      getSearchableText(item).toLowerCase().includes(lowerQuery)
-    );
-  };
-
-  const allResults = useMemo(() => {
-    if (!query) return { tasks: [], policies: [], tools: [], people: [], news: [] };
-
-    return {
-      tasks: searchInArray(tasks, query, t => `${t.title} ${t.summary} ${t.category}`),
-      policies: searchInArray(policies, query, p => `${p.title} ${p.keyBullets.join(' ')}`),
-      tools: searchInArray(tools, query, t => `${t.name} ${t.description} ${t.type}`),
-      people: searchInArray(people, query, p => `${p.name} ${p.role} ${p.department}`),
-      news: searchInArray(newsItems, query, n => `${n.title} ${n.excerpt} ${n.content}`),
-    };
-  }, [query]);
 
   const getFilteredResults = () => {
     switch (activeTab) {
@@ -65,7 +55,7 @@ export default function SearchContent() {
     filteredResults.news.length;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Search' }]} />
       
       <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Results</h1>
@@ -92,9 +82,9 @@ export default function SearchContent() {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">How-To Guides</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredResults.tasks.map((task) => (
-                  <Card key={task.id} href={`/tasks/${task.slug}`}>
-                    <h3 className="font-semibold text-gray-900 mb-2">{task.title}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-2">{task.summary}</p>
+                  <Card key={task.frontmatter.slug} href={`/tasks/${task.frontmatter.slug}`}>
+                    <h3 className="font-semibold text-gray-900 mb-2">{task.frontmatter.title}</h3>
+                    <p className="text-sm text-gray-600 line-clamp-2">{task.frontmatter.summary}</p>
                   </Card>
                 ))}
               </div>
@@ -107,10 +97,10 @@ export default function SearchContent() {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">Policies</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredResults.policies.map((policy) => (
-                  <Card key={policy.id} href={`/policies/${policy.slug}`}>
-                    <h3 className="font-semibold text-gray-900 mb-2">{policy.title}</h3>
+                  <Card key={policy.frontmatter.slug} href={`/policies/${policy.frontmatter.slug}`}>
+                    <h3 className="font-semibold text-gray-900 mb-2">{policy.frontmatter.title}</h3>
                     <p className="text-sm text-gray-600 line-clamp-2">
-                      {policy.keyBullets[0]}
+                      {policy.frontmatter.summary}
                     </p>
                   </Card>
                 ))}
@@ -124,9 +114,9 @@ export default function SearchContent() {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">Tools</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredResults.tools.map((tool) => (
-                  <Card key={tool.id} href={`/tools/${tool.slug}`}>
-                    <h3 className="font-semibold text-gray-900 mb-2">{tool.name}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-2">{tool.description}</p>
+                  <Card key={tool.frontmatter.slug} href={`/tools/${tool.frontmatter.slug}`}>
+                    <h3 className="font-semibold text-gray-900 mb-2">{tool.frontmatter.title}</h3>
+                    <p className="text-sm text-gray-600 line-clamp-2">{tool.frontmatter.summary}</p>
                   </Card>
                 ))}
               </div>
@@ -155,10 +145,12 @@ export default function SearchContent() {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">News</h2>
               <div className="space-y-4">
                 {filteredResults.news.map((item) => (
-                  <Card key={item.id} href={`/news/${item.slug}`}>
-                    <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.excerpt}</p>
-                    <p className="text-xs text-gray-500 mt-2">{item.date}</p>
+                  <Card key={item.frontmatter.slug} href={`/news/${item.frontmatter.slug}`}>
+                    <h3 className="font-semibold text-gray-900 mb-2">{item.frontmatter.title}</h3>
+                    <p className="text-sm text-gray-600">{item.frontmatter.excerpt || item.frontmatter.summary}</p>
+                    {item.frontmatter.date && (
+                      <p className="text-xs text-gray-500 mt-2">{item.frontmatter.date}</p>
+                    )}
                   </Card>
                 ))}
               </div>
@@ -173,8 +165,7 @@ export default function SearchContent() {
           )}
         </>
       )}
-    </div>
+    </>
   );
 }
-
 

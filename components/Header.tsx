@@ -7,6 +7,8 @@ import SearchBar from './SearchBar';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Navigation items - can be loaded from content/navigation.json on server side if needed
+  // For now, using default navigation
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Tasks & Services', href: '/tasks' },

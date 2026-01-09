@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Card from '@/components/Card';
-import { tasks, policies } from '@/lib/mockData';
+import { getContentPage, getContentPages } from '@/lib/content/loader.server';
+import { MarkdownContent } from '@/lib/content/markdown';
 
 interface PageProps {
   params: {
@@ -11,20 +12,24 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
+  const tasks = getContentPages('tasks');
   return tasks.map((task) => ({
-    slug: task.slug,
+    slug: task.frontmatter.slug,
   }));
 }
 
 export default function TaskDetailPage({ params }: PageProps) {
-  const task = tasks.find(t => t.slug === params.slug);
+  const task = getContentPage('tasks', params.slug);
 
   if (!task) {
     notFound();
   }
 
-  const relatedPolicies = task.relatedPolicies
-    ? policies.filter(p => task.relatedPolicies?.includes(p.slug))
+  // Get related policies
+  const relatedPolicies = task.frontmatter.relatedPolicies
+    ? task.frontmatter.relatedPolicies
+        .map(slug => getContentPage('policies', slug))
+        .filter(Boolean)
     : [];
 
   return (
@@ -32,38 +37,53 @@ export default function TaskDetailPage({ params }: PageProps) {
       <Breadcrumbs items={[
         { label: 'Home', href: '/' },
         { label: 'Tasks & Services', href: '/tasks' },
-        { label: task.title }
+        { label: task.frontmatter.title }
       ]} />
 
       <div className="mb-6">
-        <span className="inline-block text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full mb-4">
-          {task.category}
-        </span>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">{task.title}</h1>
-        <p className="text-lg text-gray-600">{task.summary}</p>
+        {task.frontmatter.tags && task.frontmatter.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {task.frontmatter.tags.map((tag) => (
+              <span key={tag} className="inline-block text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">{task.frontmatter.title}</h1>
+        <p className="text-lg text-gray-600">{task.frontmatter.summary}</p>
       </div>
 
       {/* Step-by-step guide */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">How-To Guide</h2>
-        <ol className="space-y-4">
-          {task.steps.map((step, index) => (
-            <li key={index} className="flex items-start">
-              <span className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold mr-4">
-                {index + 1}
-              </span>
-              <p className="text-gray-700 pt-1">{step}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+      {task.frontmatter.steps && task.frontmatter.steps.length > 0 && (
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">How-To Guide</h2>
+          <ol className="space-y-4">
+            {task.frontmatter.steps.map((step, index) => (
+              <li key={index} className="flex items-start">
+                <span className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold mr-4">
+                  {index + 1}
+                </span>
+                <p className="text-gray-700 pt-1">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {/* Main content */}
+      {task.content && (
+        <section className="mb-8">
+          <MarkdownContent content={task.content} />
+        </section>
+      )}
 
       {/* Related Forms */}
-      {task.relatedForms && task.relatedForms.length > 0 && (
+      {task.frontmatter.relatedForms && task.frontmatter.relatedForms.length > 0 && (
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Related Forms</h2>
           <ul className="space-y-2">
-            {task.relatedForms.map((form, index) => (
+            {task.frontmatter.relatedForms.map((form, index) => (
               <li key={index} className="text-gray-700">
                 • {form}
               </li>
@@ -78,10 +98,10 @@ export default function TaskDetailPage({ params }: PageProps) {
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Related Policies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {relatedPolicies.map((policy) => (
-              <Card key={policy.id} href={`/policies/${policy.slug}`}>
-                <h3 className="font-semibold text-gray-900 mb-2">{policy.title}</h3>
+              <Card key={policy.frontmatter.slug} href={`/policies/${policy.frontmatter.slug}`}>
+                <h3 className="font-semibold text-gray-900 mb-2">{policy.frontmatter.title}</h3>
                 <p className="text-sm text-gray-600 line-clamp-2">
-                  {policy.keyBullets[0]}
+                  {policy.frontmatter.summary}
                 </p>
               </Card>
             ))}
@@ -90,19 +110,22 @@ export default function TaskDetailPage({ params }: PageProps) {
       )}
 
       {/* Contacts */}
-      {task.contacts && task.contacts.length > 0 && (
+      {task.frontmatter.contacts && task.frontmatter.contacts.length > 0 && (
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Need Help?</h2>
           <div className="bg-gray-50 rounded-lg p-4">
             <p className="text-sm text-gray-600 mb-2">Contact:</p>
             <ul className="space-y-1">
-              {task.contacts.map((contact, index) => (
-                <li key={index} className="text-gray-900">
-                  <a href={`mailto:${contact}`} className="text-blue-600 hover:text-blue-800">
-                    {contact}
-                  </a>
-                </li>
-              ))}
+              {task.frontmatter.contacts.map((contact, index) => {
+                const contactStr = typeof contact === 'string' ? contact : contact.email;
+                return (
+                  <li key={index} className="text-gray-900">
+                    <a href={`mailto:${contactStr}`} className="text-blue-600 hover:text-blue-800">
+                      {contactStr}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>

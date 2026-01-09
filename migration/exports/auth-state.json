@@ -1,0 +1,94 @@
+{
+  "cookies": [
+    {
+      "name": "crumb",
+      "value": "BWGWgX+ZZZM/NTE3Y2I5MmM0MTA4ZDc5NmFlMDU0YTkxOGQxZjM0",
+      "domain": "cyan-tangerine-w282.squarespace.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "oSRCDPwx2jPlUb3bihKzr1p42wWwMZAua5HJN2axa6c-1767959862-1.0.1.1-mM_a9ID6rdjJo6ndOuHDat6fdldArRDDTsTNsKsXJusdOqTd6d9EW2.W1hjDVevs",
+      "domain": ".vimeo.com",
+      "path": "/",
+      "expires": 1767961662.257917,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cfuvid",
+      "value": "Vz4FTGGlUh88HCMD57SznCWizWWk_r5Mv9jDZqkTBTM-1767959862214-0.0.1.1-604800000",
+      "domain": ".vimeo.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cfuvid",
+      "value": "wdwnsp_gYqbsLA5X3lRW6Cr5lv5rmDAbVuICASc1q4I-1767959862409-0.0.1.1-604800000",
+      "domain": ".challenges.cloudflare.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "Locked",
+      "value": "wXXHUT1NSbctXK71WTqUDuxK/qdXGUxGbN9vXFNpQtg=",
+      "domain": ".cyan-tangerine-w282.squarespace.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ss_cvr",
+      "value": "8ca5ff96-6247-4e70-8b64-3cad9f999ea3|1767959864945|1767959864945|1767959864945|1",
+      "domain": "cyan-tangerine-w282.squarespace.com",
+      "path": "/",
+      "expires": 1802519864.945266,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ss_cvt",
+      "value": "1767959864945",
+      "domain": "cyan-tangerine-w282.squarespace.com",
+      "path": "/",
+      "expires": 1767961664,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://cyan-tangerine-w282.squarespace.com",
+      "localStorage": [
+        {
+          "name": "test",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "origin": "https://challenges.cloudflare.com",
+      "localStorage": [
+        {
+          "name": "cf.turnstile.u",
+          "value": "gRjrMwa6lxplS.ofHvsO0hpFCvBtn3M77zNzZNAMfIY-1767959862-1.3.1.1-uCsS97qzYbhrkagHorpeboQevzRBlxdJeDnlYuFUJK0wsxLi9b40OLLPKU_bkS55cWSBg5CqW_LR3dAD1znHBw"
+        }
+      ]
+    }
+  ]
+}

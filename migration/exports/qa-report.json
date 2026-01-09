@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-09T10:47:05.742Z",
+  "pages": {
+    "total": 29,
+    "byCategory": {
+      "tasks": 4,
+      "policies": 24,
+      "teams": 1,
+      "tools": 0,
+      "news": 0,
+      "about": 0
+    }
+  },
+  "assets": {
+    "total": 20,
+    "downloaded": 20,
+    "failed": 0
+  },
+  "issues": {
+    "brokenLinks": 0,
+    "missingAssets": 0,
+    "emptyPages": 2,
+    "orphanPages": 0
+  },
+  "search": {
+    "indexed": 29,
+    "working": true
+  }
+}
