@@ -11,10 +11,10 @@ interface FilterChipsProps {
 export default function FilterChips({ filters, paramName, label }: FilterChipsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const activeFilter = searchParams.get(paramName);
+  const activeFilter = searchParams?.get(paramName) ?? null;
 
   const handleFilter = (filter: string | null) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() ?? '');
     if (filter && filter !== 'all') {
       params.set(paramName, filter);
     } else {

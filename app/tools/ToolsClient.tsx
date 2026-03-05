@@ -14,7 +14,7 @@ interface ToolsClientProps {
 
 export default function ToolsClient({ tools, toolTypes }: ToolsClientProps) {
   const searchParams = useSearchParams();
-  const selectedType = searchParams.get('type');
+  const selectedType = searchParams?.get('type') ?? null;
 
   const toolsByType = useMemo(() => {
     return toolTypes.reduce((acc, type) => {

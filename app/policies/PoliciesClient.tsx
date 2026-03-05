@@ -15,7 +15,7 @@ interface PoliciesClientProps {
 export default function PoliciesClient({ policies, categories }: PoliciesClientProps) {
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
-  const selectedCategory = searchParams.get('category');
+  const selectedCategory = searchParams?.get('category') ?? null;
 
   const filteredPolicies = useMemo(() => {
     return policies.filter(policy => {

@@ -15,7 +15,7 @@ interface DirectoryClientProps {
 export default function DirectoryClient({ people, departments }: DirectoryClientProps) {
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
-  const selectedDepartment = searchParams.get('department');
+  const selectedDepartment = searchParams?.get('department') ?? null;
 
   const filteredPeople = useMemo(() => {
     return people.filter(person => {

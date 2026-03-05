@@ -10,7 +10,7 @@ import { ContentPage, Person } from '@/lib/content/types';
 
 export default function SearchClient() {
   const searchParams = useSearchParams();
-  const query = searchParams.get('q') || '';
+  const query = searchParams?.get('q') || '';
   const [activeTab, setActiveTab] = useState('all');
   const [allResults, setAllResults] = useState<{
     tasks: ContentPage[];
