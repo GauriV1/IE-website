@@ -1,0 +1,79 @@
+{
+  "id": "travel-expense-2026",
+  "title": "Travel and Expense Policy",
+  "version": "2.0",
+  "effectiveDate": "2026-03-01",
+  "lastUpdated": "2026-03-05",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Purpose",
+      "content": "Policy purpose text here..."
+    },
+    {
+      "id": "section-2",
+      "title": "Scope",
+      "content": "Who this policy applies to..."
+    },
+    {
+      "id": "section-3",
+      "title": "Travel Authorization",
+      "subsections": [
+        {
+          "title": "Pre-Approval Requirements",
+          "content": "..."
+        },
+        {
+          "title": "Booking Procedures",
+          "content": "..."
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "title": "Expense Categories",
+      "subsections": [
+        {
+          "title": "Transportation",
+          "content": "Airfare, rental cars, mileage rates..."
+        },
+        {
+          "title": "Lodging",
+          "content": "Hotel policies, per diem rates..."
+        },
+        {
+          "title": "Meals",
+          "content": "Meal allowances, receipts required..."
+        },
+        {
+          "title": "Other Expenses",
+          "content": "Registration fees, supplies..."
+        }
+      ]
+    },
+    {
+      "id": "section-5",
+      "title": "Reimbursement Process",
+      "content": "How to submit expenses..."
+    },
+    {
+      "id": "section-6",
+      "title": "Non-Reimbursable Expenses",
+      "content": "List of items not covered..."
+    }
+  ],
+  "appendices": [
+    {
+      "title": "Per Diem Rates",
+      "content": "Rate table or link..."
+    },
+    {
+      "title": "Expense Report Form",
+      "link": "/forms/expense-report.pdf"
+    }
+  ],
+  "contacts": {
+    "questions": "finance@whitman.edu",
+    "approvals": "supervisor"
+  }
+}

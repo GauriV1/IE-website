@@ -1,0 +1,17 @@
+{
+  "category": "Tools & Applications",
+  "description": "Software and tools used by our division",
+  "items": [
+    {
+      "id": "tool-001",
+      "name": "Tool Name",
+      "description": "What this tool does",
+      "url": "https://tool.example.com",
+      "icon": "tool-icon",
+      "category": "Other",
+      "accessLevel": "All Staff",
+      "documentation": "/docs/tool-guide.pdf",
+      "tags": ["hr", "time-tracking"]
+    }
+  ]
+}

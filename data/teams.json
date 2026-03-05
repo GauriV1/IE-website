@@ -1,0 +1,16 @@
+{
+  "category": "Teams",
+  "description": "Our teams within the Division of Inclusive Excellence",
+  "teams": [
+    {
+      "id": "team-hr",
+      "name": "Human Resources",
+      "description": "Supporting our employees through their entire journey, from recruitment to retirement. Recruitment & Hiring, Benefits Administration, Employee Relations, Professional Development, Policy Management.",
+      "members": [],
+      "contact": {
+        "email": "hr@whitman.edu",
+        "location": "Contact via HR"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "category": "Tasks & Services",
+  "description": "Common tasks and services provided by the Division of Inclusive Excellence",
+  "items": [
+    {
+      "id": "task-student-employment",
+      "title": "Student Employment",
+      "description": "Overview of the Student Hiring Process. Student Employees for The Division of Inclusive Excellence are hired at the beginning of each academic year.",
+      "icon": "📋",
+      "link": "tasks/studentemployment.html",
+      "tags": ["hr", "student", "supervision", "payroll"],
+      "lastUpdated": "2026-03-05"
+    },
+    {
+      "id": "task-request-time-off",
+      "title": "Request Time Off",
+      "description": "Submit a request for vacation, sick leave, or personal time off.",
+      "icon": "📅",
+      "link": "tasks/request-time-off.html",
+      "tags": ["hr", "time-off", "leave"],
+      "lastUpdated": "2026-03-05"
+    },
+    {
+      "id": "task-cards",
+      "title": "Purchasing Cards (Credit Cards)",
+      "description": "Utilize your JP Morgan Chase credit card; reconciling receipts; gift card and red-flag guidelines.",
+      "icon": "💳",
+      "link": "tasks/cards.html",
+      "tags": ["purchasing", "reconciliation", "receipts"],
+      "lastUpdated": "2026-03-05"
+    },
+    {
+      "id": "task-signrequest",
+      "title": "SignRequest",
+      "description": "Electronic signature gathering. How to respond to SignRequest emails and use the Finalize button.",
+      "icon": "✍️",
+      "link": "tasks/signrequest.html",
+      "tags": ["signatures", "business office"],
+      "lastUpdated": "2026-03-05"
+    }
+  ]
+}

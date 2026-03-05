@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Card from '@/components/Card';
-import HeroCarousel from '@/components/HeroCarousel';
 
 export default function Home() {
   return (
@@ -18,11 +17,6 @@ export default function Home() {
           Find what you need quickly and easily.
         </p>
       </div>
-
-      {/* Featured Image Section */}
-      <section className="mb-16">
-        <HeroCarousel />
-      </section>
 
       {/* Quick Access Sections */}
       <section className="mb-16">

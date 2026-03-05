@@ -1,0 +1,109 @@
+{
+  "category": "Policies & Resources",
+  "description": "Official policies and helpful resources",
+  "subcategories": [
+    {
+      "name": "Policies",
+      "items": [
+        {
+          "id": "policy-travel-expense",
+          "title": "Travel and Business Expense Policy",
+          "description": "Whitman College travel and business expense policy. Full PDF available on the policy page.",
+          "documentUrl": "travel-expense-policy.html",
+          "effectiveDate": "2024-01-16",
+          "lastReviewed": "2024-01-16",
+          "tags": ["policy", "compliance", "travel", "expense"],
+          "badge": "NEW"
+        },
+        {
+          "id": "policy-telework",
+          "title": "Telework Remote and Hybrid Work Policy",
+          "description": "Human Resources August 2021. Remote and hybrid work options, eligibility, telework agreement.",
+          "documentUrl": "policies/remotework.html",
+          "effectiveDate": "2021-08-01",
+          "lastReviewed": "2021-08-01",
+          "tags": ["policy", "telework", "hybrid", "remote"],
+          "link": "policies/remotework.html"
+        },
+        {
+          "id": "policy-summer-hours",
+          "title": "Summer Hours",
+          "description": "Option 1: earlier start; Option 2: four 9-hour days and one 4-hour day. Staff Recognition and discretionary half-days.",
+          "documentUrl": "policies/summer-hours.html",
+          "effectiveDate": "2024-01-01",
+          "tags": ["policy", "summer", "hours"],
+          "link": "policies/summer-hours.html"
+        },
+        {
+          "id": "policy-transition",
+          "title": "Exempt to Professional Nonexempt Transition",
+          "description": "Washington State salary threshold changes; guidelines for staff transitioning to professional nonexempt.",
+          "documentUrl": "policies/transition.html",
+          "tags": ["policy", "hr", "payroll", "nonexempt"],
+          "link": "policies/transition.html"
+        },
+        {
+          "id": "policy-travel-meals",
+          "title": "Travel & Meals",
+          "description": "TME, meals object codes, lodging, airfare, mileage, motor pool, car rental, insurance and liability waivers.",
+          "documentUrl": "policies/travel-meals.html",
+          "tags": ["travel", "meals", "lodging", "transportation"],
+          "link": "policies/travel-meals.html"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "items": [
+        {
+          "id": "resource-abbreviations",
+          "title": "Inclusive Excellence Abbreviations",
+          "description": "AAC&U, ADA, DEI, LACRELA, NACCC, and other IE abbreviations. PDF available.",
+          "link": "policies/abbreviations.html",
+          "type": "internal",
+          "tags": ["reference", "abbreviations"]
+        },
+        {
+          "id": "resource-stamps",
+          "title": "Stamping Your Paperwork",
+          "description": "How to stamp and combine credit card receipts using Adobe; alternative systems.",
+          "link": "policies/stamps.html",
+          "type": "internal",
+          "tags": ["reconciliation", "receipts", "adobe"]
+        },
+        {
+          "id": "resource-stress-calendar",
+          "title": "Student Stress Calendar",
+          "description": "Month-by-month overview of common student stress points (adapted from Illinois State University / Lewis & Clark).",
+          "link": "policies/stresscalendar.html",
+          "type": "internal",
+          "tags": ["students", "programming", "calendar"]
+        },
+        {
+          "id": "resource-calendar-share",
+          "title": "Calendar Share",
+          "description": "Useful links: Academic Calendar, Calendar Share spreadsheet, Religious Holy Days, Holiday Schedule.",
+          "link": "policies/calendarshare.html",
+          "type": "internal",
+          "tags": ["calendar", "programming", "events"]
+        },
+        {
+          "id": "resource-student-handbook",
+          "title": "Student Employment Handbook",
+          "description": "Whitman College Student Employment Handbook (PDF).",
+          "documentUrl": "docs/Whitman-College-Student-Employment-Handbook.pdf",
+          "type": "document",
+          "tags": ["student", "employment", "handbook"]
+        },
+        {
+          "id": "resource-social-media",
+          "title": "WC Social Media Guidelines 2024-25",
+          "description": "Whitman College Social Media Guidelines (PDF).",
+          "documentUrl": "docs/WC Social Media Guidelines 2024-25.pdf",
+          "type": "document",
+          "tags": ["communications", "social media"]
+        }
+      ]
+    }
+  ]
+}

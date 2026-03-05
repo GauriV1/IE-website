@@ -1,0 +1,18 @@
+{
+  "category": "Directory",
+  "description": "Contact information for Division of Inclusive Excellence staff",
+  "staff": [
+    {
+      "id": "staff-001",
+      "name": "Full Name",
+      "title": "Job Title",
+      "department": "Department Name",
+      "email": "email@whitman.edu",
+      "phone": "509-XXX-XXXX",
+      "office": "Building, Room XXX",
+      "photo": "/images/staff/person.jpg",
+      "bio": "Brief biography...",
+      "tags": ["leadership", "hr"]
+    }
+  ]
+}

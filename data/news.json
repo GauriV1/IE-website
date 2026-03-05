@@ -1,0 +1,16 @@
+{
+  "category": "News",
+  "items": [
+    {
+      "id": "news-001",
+      "title": "News Headline",
+      "summary": "Brief summary of the news item",
+      "content": "Full content of the news article...",
+      "date": "2026-03-05",
+      "author": "Author Name",
+      "category": "Announcement",
+      "image": "/images/news/article.jpg",
+      "tags": ["event", "policy-update"]
+    }
+  ]
+}

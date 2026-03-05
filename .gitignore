@@ -38,6 +38,8 @@ next-env.d.ts
 /migration/output/
 /migration/exports/*.xml
 
+# extracted zip (temporary)
+_extract_zip/
 
 
 
