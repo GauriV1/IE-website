@@ -1,5 +1,5 @@
 ---
-title: "Student Stress Calendar — Division of Inclusive Excellence Digital Handbook"
+title: "Student Stress Calendar"
 slug: "stresscalendar"
 category: "policies"
 audience: ["all"]

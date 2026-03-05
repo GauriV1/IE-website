@@ -1,5 +1,5 @@
 ---
-title: "DI Mission Statement — Division of Inclusive Excellence Digital Handbook"
+title: "DI Mission Statement"
 slug: "mission"
 category: "policies"
 audience: ["all"]

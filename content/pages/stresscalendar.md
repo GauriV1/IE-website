@@ -1,5 +1,5 @@
 ---
-title: "Student Stress Calendar — Division of Inclusive Excellence Digital Handbook"
+title: "Student Stress Calendar"
 slug: "stresscalendar"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/stresscalendar"
 ---

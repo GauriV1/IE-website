@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Combine PDFs (Folio)"
 slug: "folio"
 category: "policies"
 audience: ["all"]

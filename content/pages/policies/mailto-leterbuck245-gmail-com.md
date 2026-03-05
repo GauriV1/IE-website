@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Contact"
 slug: "mailto-leterbuck245-gmail-com"
 category: "policies"
 audience: ["all"]

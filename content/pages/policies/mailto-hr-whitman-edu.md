@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Contact HR"
 slug: "mailto-hr-whitman-edu"
 category: "policies"
 audience: ["all"]

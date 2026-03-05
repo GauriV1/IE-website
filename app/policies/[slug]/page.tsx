@@ -19,7 +19,8 @@ export function generateStaticParams() {
 }
 
 export default function PolicyDetailPage({ params }: PageProps) {
-  const policy = getContentPage('policies', params.slug);
+  const slug = params?.slug ?? '';
+  const policy = getContentPage('policies', slug);
 
   if (!policy) {
     notFound();

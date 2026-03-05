@@ -1,5 +1,5 @@
 ---
-title: "Student Employment — Division of Inclusive Excellence Digital Handbook"
+title: "Student Employment"
 slug: "studentemployment"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/studentemployment"
 ---

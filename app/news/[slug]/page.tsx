@@ -16,7 +16,8 @@ export function generateStaticParams() {
 }
 
 export default function NewsDetailPage({ params }: PageProps) {
-  const item = newsItems.find(n => n.slug === params.slug);
+  const slug = params?.slug ?? '';
+  const item = newsItems.find(n => n.slug === slug);
 
   if (!item) {
     notFound();

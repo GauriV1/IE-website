@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Handbook Home"
 slug: "home"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/"
 ---

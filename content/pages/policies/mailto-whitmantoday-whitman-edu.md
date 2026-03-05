@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Whitman Today"
 slug: "mailto-whitmantoday-whitman-edu"
 category: "policies"
 audience: ["all"]

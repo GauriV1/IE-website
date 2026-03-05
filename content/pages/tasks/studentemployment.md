@@ -1,5 +1,5 @@
 ---
-title: Student Employment — Division of Inclusive Excellence Digital Handbook
+title: Student Employment
 slug: studentemployment
 category: tasks
 audience:
@@ -156,9 +156,7 @@ Please have your student review the [Student Employment Handbook](https://www.wh
 SHIFT e-Course?
 
 
-# Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate.
-
-# Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate.Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate.Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate. Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate. Minimum wage for 2025 is set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate.
+**Minimum wage for 2025:** Set to be raised from $16.28 per hour as of January 1st, 2025. All students that are below $16.66 will increase in January to the new rate.
 
 ### Paying A Student
 

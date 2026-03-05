@@ -19,7 +19,8 @@ export function generateStaticParams() {
 }
 
 export default function TaskDetailPage({ params }: PageProps) {
-  const task = getContentPage('tasks', params.slug);
+  const slug = params?.slug ?? '';
+  const task = getContentPage('tasks', slug);
 
   if (!task) {
     notFound();

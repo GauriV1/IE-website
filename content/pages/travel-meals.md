@@ -1,5 +1,5 @@
 ---
-title: "Travel — Division of Inclusive Excellence Digital Handbook"
+title: "Travel"
 slug: "travel-meals"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/travel-meals"
 ---

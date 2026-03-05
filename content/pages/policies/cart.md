@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Handbook"
 slug: "cart"
 category: "policies"
 audience: ["all"]

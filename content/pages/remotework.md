@@ -1,5 +1,5 @@
 ---
-title: "Telework Remote and Hybrid Work Policy — Division of Inclusive Excellence Digital Handbook"
+title: "Telework Remote and Hybrid Work Policy"
 slug: "remotework"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/remotework"
 ---

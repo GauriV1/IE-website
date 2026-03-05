@@ -1,5 +1,5 @@
 ---
-title: "Summer Hours — Division of Inclusive Excellence Digital Handbook"
+title: "Summer Hours"
 slug: "summer-hours"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/summer-hours"
 ---

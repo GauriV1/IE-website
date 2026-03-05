@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Credit Card Support"
 slug: "mailto-jpmorgan-whitman-edu"
 category: "policies"
 audience: ["all"]

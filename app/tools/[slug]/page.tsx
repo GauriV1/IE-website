@@ -16,7 +16,8 @@ export function generateStaticParams() {
 }
 
 export default function ToolDetailPage({ params }: PageProps) {
-  const tool = tools.find(t => t.slug === params.slug);
+  const slug = params?.slug ?? '';
+  const tool = tools.find(t => t.slug === slug);
 
   if (!tool) {
     notFound();

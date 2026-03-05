@@ -1,5 +1,5 @@
 ---
-title: Inclusive Excellence Plan — Division of Inclusive Excellence Digital Handbook
+title: Inclusive Excellence Plan
 slug: excellence
 category: policies
 audience:

@@ -1,5 +1,5 @@
 ---
-title: "Inclusive Excellence Abbreviations — Division of Inclusive Excellence Digital Handbook"
+title: "Inclusive Excellence Abbreviations"
 slug: "abbreviations"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/abbreviations"
 ---

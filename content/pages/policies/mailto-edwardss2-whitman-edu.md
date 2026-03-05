@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Contact"
 slug: "mailto-edwardss2-whitman-edu"
 category: "policies"
 audience: ["all"]

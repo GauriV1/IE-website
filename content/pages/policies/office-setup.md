@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Office Setup"
 slug: "office-setup"
 category: "policies"
 audience: ["all"]

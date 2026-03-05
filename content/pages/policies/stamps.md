@@ -1,5 +1,5 @@
 ---
-title: "Stamps — Division of Inclusive Excellence Digital Handbook"
+title: "Stamps"
 slug: "stamps"
 category: "policies"
 audience: ["all"]

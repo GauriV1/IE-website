@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { people } from '@/lib/mockData';
+import { getPeople, getPerson } from '@/lib/content/loader.server';
 
 interface PageProps {
   params: {
@@ -10,13 +10,15 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
+  const people = getPeople();
   return people.map((person) => ({
     id: person.id,
   }));
 }
 
 export default function PersonDetailPage({ params }: PageProps) {
-  const person = people.find(p => p.id === params.id);
+  const id = params?.id ?? '';
+  const person = getPerson(id);
 
   if (!person) {
     notFound();

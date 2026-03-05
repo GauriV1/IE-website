@@ -1,5 +1,5 @@
 ---
-title: "SignRequest — Division of Inclusive Excellence Digital Handbook"
+title: "SignRequest"
 slug: "signrequest"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/signrequest"
 ---

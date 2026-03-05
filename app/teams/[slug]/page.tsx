@@ -17,7 +17,8 @@ export function generateStaticParams() {
 }
 
 export default function TeamDetailPage({ params }: PageProps) {
-  const team = teams.find(t => t.slug === params.slug);
+  const slug = params?.slug ?? '';
+  const team = teams.find(t => t.slug === slug);
 
   if (!team) {
     notFound();

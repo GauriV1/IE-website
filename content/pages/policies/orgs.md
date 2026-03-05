@@ -1,5 +1,5 @@
 ---
-title: "Division of Inclusive Excellence Digital Handbook"
+title: "Organizations"
 slug: "orgs"
 category: "policies"
 audience: ["all"]

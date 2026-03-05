@@ -1,5 +1,5 @@
 ---
-title: "Purchasing Cards — Division of Inclusive Excellence Digital Handbook"
+title: "Purchasing Cards"
 slug: "cards"
 category: "tasks"
 audience: ["all"]

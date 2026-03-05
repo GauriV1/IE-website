@@ -1,5 +1,5 @@
 ---
-title: Calendar Share — Division of Inclusive Excellence Digital Handbook
+title: Calendar Share
 slug: calendarshare
 category: policies
 audience:

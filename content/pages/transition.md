@@ -1,5 +1,5 @@
 ---
-title: "Exempt to Professional Nonexempt Transition — Division of Inclusive Excellence Digital Handbook"
+title: "Exempt to Professional Nonexempt Transition"
 slug: "transition"
 sourceUrl: "https://cyan-tangerine-w282.squarespace.com/transition"
 ---
