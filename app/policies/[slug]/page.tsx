@@ -53,7 +53,7 @@ export default function PolicyDetailPage({ params }: PageProps) {
             </div>
           )}
           {policy.frontmatter.lastUpdated && (
-            <span className="text-sm text-gray-500">Last updated: {policy.frontmatter.lastUpdated}</span>
+            <span className="text-sm text-gray-600">Last updated: {policy.frontmatter.lastUpdated}</span>
           )}
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">{policy.frontmatter.title}</h1>

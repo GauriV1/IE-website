@@ -18,12 +18,16 @@ export default function DirectoryClient({ people, departments }: DirectoryClient
   const selectedDepartment = searchParams?.get('department') ?? null;
 
   const filteredPeople = useMemo(() => {
-    return people.filter(person => {
-      const matchesSearch = searchQuery === '' || 
-        person.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        person.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        person.department.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesDepartment = !selectedDepartment || person.department === selectedDepartment;
+    const list = people ?? [];
+    const q = (searchQuery ?? '').trim().toLowerCase();
+    return list.filter((person) => {
+      if (!person) return false;
+      const name = (person.name ?? '').toLowerCase();
+      const role = (person.role ?? '').toLowerCase();
+      const dept = (person.department ?? '').toLowerCase();
+      const matchesSearch =
+        q === '' || name.includes(q) || role.includes(q) || dept.includes(q);
+      const matchesDepartment = !selectedDepartment || (person.department ?? '') === selectedDepartment;
       return matchesSearch && matchesDepartment;
     });
   }, [searchQuery, selectedDepartment, people]);
@@ -50,16 +54,20 @@ export default function DirectoryClient({ people, departments }: DirectoryClient
 
       {/* Results */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredPeople.map((person) => (
-          <Card key={person.id} href={`/directory/${person.id}`}>
-            <h3 className="font-semibold text-gray-900 mb-1">{person.name}</h3>
-            <p className="text-sm text-gray-600 mb-1">{person.role}</p>
-            <p className="text-xs text-gray-500 mb-3">{person.department}</p>
-            <a href={`mailto:${person.email}`} className="text-sm text-blue-600 hover:text-blue-800">
-              {person.email}
-            </a>
-          </Card>
-        ))}
+        {(filteredPeople ?? []).map((person) => {
+          const id = person?.id;
+          if (!id) return null;
+          return (
+            <Card key={id} href={`/directory/${id}`}>
+              <h3 className="font-semibold text-gray-900 mb-1">{person?.name ?? ''}</h3>
+              <p className="text-sm text-gray-700 mb-1">{person?.role ?? ''}</p>
+              <p className="text-xs text-gray-600 mb-3">{person?.department ?? ''}</p>
+              <a href={`mailto:${person?.email ?? ''}`} className="text-sm text-blue-700 hover:text-blue-900">
+                {person?.email ?? ''}
+              </a>
+            </Card>
+          );
+        })}
       </div>
 
       {filteredPeople.length === 0 && (

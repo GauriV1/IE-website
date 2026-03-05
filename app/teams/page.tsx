@@ -22,7 +22,7 @@ export default function TeamsPage() {
             <p className="text-sm text-gray-600 line-clamp-3 mb-4">{team.frontmatter.mission || team.frontmatter.summary}</p>
             {team.frontmatter.contacts && team.frontmatter.contacts.length > 0 && (
               <div className="pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500 mb-2">Key Contacts:</p>
+                <p className="text-xs text-gray-600 mb-2">Key Contacts:</p>
                 <ul className="space-y-1">
                   {team.frontmatter.contacts.slice(0, 2).map((contact, idx) => {
                     const contactStr = typeof contact === 'string' ? contact : `${contact.name} - ${contact.role}`;

@@ -30,7 +30,7 @@ export default function NewsPage() {
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.frontmatter.title}</h2>
                 <p className="text-gray-600 mb-3">{item.frontmatter.excerpt || item.frontmatter.summary}</p>
                 {item.frontmatter.date && (
-                  <p className="text-sm text-gray-500">{item.frontmatter.date}</p>
+                  <p className="text-sm text-gray-600">{item.frontmatter.date}</p>
                 )}
               </div>
             </div>

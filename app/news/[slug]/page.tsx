@@ -32,7 +32,7 @@ export default function NewsDetailPage({ params }: PageProps) {
       ]} />
 
       <div className="mb-6">
-        <p className="text-sm text-gray-500 mb-4">{item.date}</p>
+        <p className="text-sm text-gray-600 mb-4">{item.date}</p>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h1>
       </div>
 

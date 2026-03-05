@@ -18,13 +18,21 @@ export default function PoliciesClient({ policies, categories }: PoliciesClientP
   const selectedCategory = searchParams?.get('category') ?? null;
 
   const filteredPolicies = useMemo(() => {
-    return policies.filter(policy => {
-      const matchesSearch = searchQuery === '' || 
-        policy.frontmatter.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        policy.frontmatter.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (policy.frontmatter.keyBullets || []).some(bullet => bullet.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = !selectedCategory || 
-        (policy.frontmatter.tags || []).includes(selectedCategory);
+    const list = policies ?? [];
+    const q = (searchQuery ?? '').trim().toLowerCase();
+    return list.filter((policy) => {
+      const fm = policy?.frontmatter;
+      if (!fm) return false;
+      const title = (fm.title ?? '').toLowerCase();
+      const summary = (fm.summary ?? '').toLowerCase();
+      const bullets = fm.keyBullets ?? [];
+      const tags = fm.tags ?? [];
+      const matchesSearch =
+        q === '' ||
+        title.includes(q) ||
+        summary.includes(q) ||
+        bullets.some((b) => (b ?? '').toLowerCase().includes(q));
+      const matchesCategory = !selectedCategory || tags.includes(selectedCategory);
       return matchesSearch && matchesCategory;
     });
   }, [searchQuery, selectedCategory, policies]);
@@ -43,7 +51,7 @@ export default function PoliciesClient({ policies, categories }: PoliciesClientP
       </div>
 
       {/* Filters */}
-      {categories.length > 0 && (
+      {(categories ?? []).length > 0 && (
         <FilterChips 
           filters={categories} 
           paramName="category"
@@ -53,32 +61,36 @@ export default function PoliciesClient({ policies, categories }: PoliciesClientP
 
       {/* Results */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredPolicies.map((policy) => (
-          <Card key={policy.frontmatter.slug} href={`/policies/${policy.frontmatter.slug}`}>
-            <div className="flex items-start justify-between mb-2">
-              <h3 className="font-semibold text-gray-900 flex-1">{policy.frontmatter.title}</h3>
-              {policy.frontmatter.tags && policy.frontmatter.tags.length > 0 && (
-                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded ml-2">
-                  {policy.frontmatter.tags[0]}
-                </span>
-              )}
-            </div>
-            {policy.frontmatter.lastUpdated && (
-              <p className="text-xs text-gray-500 mb-3">Last updated: {policy.frontmatter.lastUpdated}</p>
-            )}
-            <p className="text-sm text-gray-600 line-clamp-3">{policy.frontmatter.summary}</p>
-            {policy.frontmatter.keyBullets && policy.frontmatter.keyBullets.length > 0 && (
-              <ul className="text-sm text-gray-600 space-y-1 mt-2">
-                {policy.frontmatter.keyBullets.slice(0, 3).map((bullet, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span className="line-clamp-1">{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </Card>
-        ))}
+        {(filteredPolicies ?? []).map((policy) => {
+          const slug = policy?.frontmatter?.slug;
+          if (!slug) return null;
+          return (
+            <Card key={slug} href={`/policies/${slug}`}>
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="font-semibold text-gray-900 flex-1">{policy?.frontmatter?.title ?? ''}</h3>
+                {policy?.frontmatter?.tags?.length ? (
+                  <span className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded ml-2">
+                    {policy.frontmatter.tags[0]}
+                  </span>
+                ) : null}
+              </div>
+              {policy?.frontmatter?.lastUpdated ? (
+                <p className="text-xs text-gray-600 mb-3">Last updated: {policy.frontmatter.lastUpdated}</p>
+              ) : null}
+              <p className="text-sm text-gray-700 line-clamp-3">{policy?.frontmatter?.summary ?? ''}</p>
+              {policy?.frontmatter?.keyBullets?.length ? (
+                <ul className="text-sm text-gray-700 space-y-1 mt-2">
+                  {policy.frontmatter.keyBullets.slice(0, 3).map((bullet, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span className="line-clamp-1">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </Card>
+          );
+        })}
       </div>
 
       {filteredPolicies.length === 0 && (

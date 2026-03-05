@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +18,39 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ===== TEXT CONTRAST (accessibility) ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: #003366;
+}
+
+p, span, div, li, label {
+  color: #333333;
+}
+
+a {
+  color: #003366;
+}
+
+a:hover {
+  color: #004d99;
+}
+
+input, textarea, select {
+  color: #1a1a1a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666666;
+}
+
+.tile p,
+.card p,
+.tile-description,
+.card-description {
+  color: #333333;
 }
 
 @layer utilities {

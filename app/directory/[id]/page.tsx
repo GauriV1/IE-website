@@ -41,19 +41,19 @@ export default function PersonDetailPage({ params }: PageProps) {
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">{person.name}</h1>
           <p className="text-lg text-gray-600 mb-1">{person.role}</p>
-          <p className="text-gray-500">{person.department}</p>
+          <p className="text-gray-600">{person.department}</p>
         </div>
 
         <div className="space-y-4 pt-6 border-t border-gray-200">
           <div>
-            <h3 className="text-sm font-medium text-gray-500 mb-1">Email</h3>
+            <h3 className="text-sm font-medium text-gray-600 mb-1">Email</h3>
             <a href={`mailto:${person.email}`} className="text-blue-600 hover:text-blue-800">
               {person.email}
             </a>
           </div>
           {person.phone && (
             <div>
-              <h3 className="text-sm font-medium text-gray-500 mb-1">Phone</h3>
+              <h3 className="text-sm font-medium text-gray-600 mb-1">Phone</h3>
               <a href={`tel:${person.phone}`} className="text-gray-900">
                 {person.phone}
               </a>
