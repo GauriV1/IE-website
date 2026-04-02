@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const SUPPORT_EMAIL = 'ie@whitman.edu';
+const SUPPORT_EMAIL = 'blakena@whitman.edu';
 
 export async function POST(request: Request) {
   try {

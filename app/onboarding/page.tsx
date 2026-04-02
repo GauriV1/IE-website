@@ -68,8 +68,8 @@ export default function OnboardingPage() {
         </p>
         <p className="text-whitman-gray">
           For handbook or operational questions, email{' '}
-          <a href="mailto:ie@whitman.edu" className="text-whitman-blue hover:underline">
-            ie@whitman.edu
+          <a href="mailto:blakena@whitman.edu" className="text-whitman-blue hover:underline">
+            blakena@whitman.edu
           </a>{' '}
           or use the <Link href="/support" className="text-whitman-blue hover:underline">Support</Link> page to submit a ticket.
         </p>

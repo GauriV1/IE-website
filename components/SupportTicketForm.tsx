@@ -39,7 +39,7 @@ export default function SupportTicketForm() {
       setDescription('');
     } catch {
       setStatus('err');
-      setMessage('Something went wrong. Please email ie@whitman.edu directly.');
+      setMessage('Something went wrong. Please email blakena@whitman.edu directly.');
     }
   }
 
@@ -137,8 +137,8 @@ export default function SupportTicketForm() {
         )}
         <p className="text-xs text-whitman-gray text-center">
           Tickets are sent to the division support inbox. For urgent matters, contact your supervisor or{' '}
-          <a href="mailto:ie@whitman.edu" className="text-whitman-blue hover:underline">
-            ie@whitman.edu
+          <a href="mailto:blakena@whitman.edu" className="text-whitman-blue hover:underline">
+            blakena@whitman.edu
           </a>
           .
         </p>

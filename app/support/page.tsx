@@ -24,8 +24,8 @@ export default function SupportPage() {
           <h2 className="text-xl font-semibold text-whitman-navy mb-3">Contact</h2>
           <p className="text-whitman-gray">
             Email:{' '}
-            <a href="mailto:ie@whitman.edu" className="text-whitman-blue hover:underline">
-              ie@whitman.edu
+            <a href="mailto:blakena@whitman.edu" className="text-whitman-blue hover:underline">
+              blakena@whitman.edu
             </a>
           </p>
           <p className="text-whitman-gray mt-2">
