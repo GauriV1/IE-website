@@ -1,7 +1,9 @@
 {
   "main": [
-    { "label": "Directory", "href": "/directory" },
-    { "label": "Flowchart", "href": "/#flowchart" },
-    { "label": "About", "href": "/#about" }
+    { "label": "Home", "href": "/" },
+    { "label": "Onboarding", "href": "/onboarding" },
+    { "label": "Processes", "href": "/processes" },
+    { "label": "Budget", "href": "/budget" },
+    { "label": "Support", "href": "/support" }
   ]
 }

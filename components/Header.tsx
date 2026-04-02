@@ -3,14 +3,16 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Onboarding', href: '/onboarding' },
+  { label: 'Processes', href: '/processes' },
+  { label: 'Budget', href: '/budget' },
+  { label: 'Support', href: '/support' },
+];
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { label: 'Directory', href: '/directory' },
-    { label: 'Flowchart', href: '/#flowchart' },
-    { label: 'About', href: '/#about' },
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b-2 border-whitman-navy shadow-sm">
@@ -23,19 +25,19 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center justify-center gap-1 flex-1">
+          <nav className="hidden md:flex items-center justify-center gap-1 flex-1 flex-wrap">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-5 py-2 text-sm font-semibold text-whitman-navy hover:text-white hover:bg-whitman-navy rounded-md transition-colors"
+                className="px-4 py-2 text-sm font-semibold text-whitman-navy hover:text-white hover:bg-whitman-navy rounded-md transition-colors"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:block w-32 shrink-0" aria-hidden />
+          <div className="hidden md:block w-8 shrink-0" aria-hidden />
 
           <button
             className="md:hidden p-2 rounded-md text-whitman-navy hover:bg-whitman-lightblue"
@@ -56,13 +58,6 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-whitman-navy">
             <nav className="flex flex-col space-y-2">
-              <Link
-                href="/"
-                className="px-3 py-2 text-sm font-medium text-whitman-gray hover:text-whitman-navy hover:bg-whitman-lightblue rounded-md"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
               {navItems.map((item) => (
                 <Link
                   key={item.href}

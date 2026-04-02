@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Budget Resources | Division of Inclusive Excellence',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function BudgetPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Budget' }]} />
       <h1 className="text-3xl font-bold text-whitman-navy mb-4">Budget</h1>
       <p className="text-lg text-whitman-gray mb-8">
         Access budget-related resources, college Business Office tools, and expense policies. Expand the sections below for quick reference.
@@ -22,7 +24,12 @@ export default function BudgetPage() {
           </summary>
           <p className="mt-3 text-whitman-gray text-sm leading-relaxed">
             Account strings (GL) typically combine fund, department, and object code segments. Your budget manager or the Business Office can confirm the correct string for your purchases. See the college{' '}
-            <a href="https://www.whitman.edu/business-office/staff-and-faculty-resources/general-ledger" className="text-whitman-blue hover:underline" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.whitman.edu/business-office/staff-and-faculty-resources/general-ledger"
+              className="text-whitman-blue hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               General Ledger resources ↗
             </a>{' '}
             for official guidance.
@@ -49,7 +56,9 @@ export default function BudgetPage() {
           </summary>
           <p className="mt-3 text-whitman-gray text-sm leading-relaxed">
             Purchasing card expenses are generally reconciled monthly in Emburse Enterprise (Chrome River). Reimbursement requests should follow the college&apos;s accountable plan timelines. See the{' '}
-            <Link href="/policies/travel-business-expense" className="text-whitman-blue hover:underline">Travel and Business Expense Policy</Link>{' '}
+            <Link href="/policies/travel-business-expense" className="text-whitman-blue hover:underline">
+              Travel &amp; Business Expense Policy
+            </Link>{' '}
             for the 60-day substantiation rule and other requirements.
           </p>
         </details>
@@ -57,9 +66,7 @@ export default function BudgetPage() {
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-whitman-navy mb-3">Chrome River / Emburse Enterprise</h2>
-        <p className="text-whitman-gray mb-3">
-          Access training and forms through the Business Office.
-        </p>
+        <p className="text-whitman-gray mb-3">Access training and forms through the Business Office.</p>
         <a
           href="https://www.whitman.edu/business-office/"
           target="_blank"
@@ -83,13 +90,22 @@ export default function BudgetPage() {
         <h2 className="text-xl font-semibold text-whitman-navy mb-3">Travel & expense</h2>
         <ul className="space-y-2 text-whitman-gray">
           <li>
-            <Link href="/policies/travel-business-expense" className="text-whitman-blue hover:underline">Travel and Business Expense Policy</Link> (full text)
+            <Link href="/policies/travel-business-expense" className="text-whitman-blue hover:underline">
+              Travel &amp; Business Expense Policy
+            </Link>{' '}
+            (full text)
           </li>
           <li>
-            <Link href="/policies/travel-meals" className="text-whitman-blue hover:underline">Travel & Meals</Link> (division guidance)
+            <Link href="/policies/travel-meals" className="text-whitman-blue hover:underline">
+              Travel &amp; Meals
+            </Link>{' '}
+            (division guidance)
           </li>
           <li>
-            <Link href="/tasks/cards" className="text-whitman-blue hover:underline">Purchasing cards</Link> (reconciliation basics)
+            <Link href="/tasks/cards" className="text-whitman-blue hover:underline">
+              Purchasing cards
+            </Link>{' '}
+            (reconciliation basics)
           </li>
         </ul>
       </section>

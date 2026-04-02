@@ -15,23 +15,38 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4">Handbook</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/directory" className="text-sm text-white hover:text-whitman-gold">
-                  A–Z Document Directory
+                <Link href="/" className="text-sm text-white hover:text-whitman-gold">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/#flowchart" className="text-sm text-white hover:text-whitman-gold">
-                  Flowchart
+                <Link href="/onboarding" className="text-sm text-white hover:text-whitman-gold">
+                  Onboarding
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="text-sm text-white hover:text-whitman-gold">
-                  About
+                <Link href="/processes" className="text-sm text-white hover:text-whitman-gold">
+                  Processes
+                </Link>
+              </li>
+              <li>
+                <Link href="/budget" className="text-sm text-white hover:text-whitman-gold">
+                  Budget
                 </Link>
               </li>
               <li>
                 <Link href="/support" className="text-sm text-white hover:text-whitman-gold">
                   Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/#directory" className="text-sm text-white hover:text-whitman-gold">
+                  A–Z Document Directory
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="text-sm text-white hover:text-whitman-gold">
+                  About
                 </Link>
               </li>
             </ul>

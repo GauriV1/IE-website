@@ -58,7 +58,35 @@ const steps = [
       </svg>
     ),
   },
-];
+] as const;
+
+type Step = (typeof steps)[number];
+
+function StepCard({ step }: { step: Step }) {
+  return (
+    <article
+      className="relative flex-1 bg-white border-2 border-whitman-navy rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-200 group"
+      title={hoverNotes[step.key]}
+    >
+      <div className="flex flex-col items-center text-center h-full">
+        <div className="text-whitman-blue mb-3">{step.icon}</div>
+        <h3 className="text-lg font-bold text-whitman-navy mb-2">{step.title}</h3>
+        <p className="text-sm text-whitman-gray mb-3 md:opacity-0 md:group-hover:opacity-100 md:absolute md:left-2 md:right-2 md:top-[calc(100%-0.5rem)] md:z-20 md:bg-white md:border md:border-whitman-navy md:rounded-lg md:p-3 md:shadow-lg md:transition-opacity md:duration-200 md:pointer-events-none">
+          {hoverNotes[step.key]}
+        </p>
+        <p className="text-sm text-whitman-gray mb-4 md:hidden">{hoverNotes[step.key]}</p>
+        <div className="mt-auto w-full">
+          <Link
+            href={step.href}
+            className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-whitman-navy text-white text-sm font-semibold hover:bg-whitman-blue transition-colors w-full"
+          >
+            {step.cta}
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function FlowchartSection() {
   return (
@@ -66,41 +94,41 @@ export default function FlowchartSection() {
       <h2 id="flowchart-heading" className="text-2xl md:text-3xl font-bold text-whitman-navy text-center mb-10">
         Your IE Handbook Journey
       </h2>
-      <div className="flex flex-col xl:flex-row xl:items-stretch xl:justify-center gap-0 xl:gap-2">
+
+      {/* Mobile: vertical stack, arrows down (below md breakpoint) */}
+      <div className="flex flex-col md:hidden">
         {steps.map((step, index) => (
-          <div key={step.key} className="flex flex-col xl:flex-row xl:items-stretch flex-1 min-w-0 max-w-md mx-auto xl:max-w-none w-full">
-            <article
-              className="relative flex-1 bg-white border-2 border-whitman-navy rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-200 group"
-              title={hoverNotes[step.key]}
-            >
-              <div className="flex flex-col items-center text-center h-full">
-                <div className="text-whitman-blue mb-3">{step.icon}</div>
-                <h3 className="text-lg font-bold text-whitman-navy mb-2">{step.title}</h3>
-                <p className="text-sm text-whitman-gray mb-3 md:opacity-0 md:group-hover:opacity-100 md:absolute md:left-2 md:right-2 md:top-[calc(100%-0.5rem)] md:z-20 md:bg-white md:border md:border-whitman-navy md:rounded-lg md:p-3 md:shadow-lg md:transition-opacity md:duration-200 md:pointer-events-none">
-                  {hoverNotes[step.key]}
-                </p>
-                <p className="text-sm text-whitman-gray mb-4 md:hidden">{hoverNotes[step.key]}</p>
-                <div className="mt-auto w-full">
-                  <Link
-                    href={step.href}
-                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-whitman-navy text-white text-sm font-semibold hover:bg-whitman-blue transition-colors w-full"
-                  >
-                    {step.cta}
-                  </Link>
-                </div>
+          <div key={step.key} className="flex flex-col">
+            <StepCard step={step} />
+            {index < steps.length - 1 && (
+              <div className="flex justify-center py-3 text-whitman-navy text-2xl font-bold" aria-hidden>
+                ↓
               </div>
-            </article>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Tablet (768px–1023px): 2×2 grid */}
+      <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        {steps.map((step) => (
+          <StepCard key={step.key} step={step} />
+        ))}
+      </div>
+
+      {/* Desktop (≥1024px): horizontal row with arrows */}
+      <div className="hidden lg:flex lg:flex-row lg:items-stretch lg:justify-center gap-0 lg:gap-2">
+        {steps.map((step, index) => (
+          <div key={step.key} className="flex flex-row items-stretch flex-1 min-w-0 max-w-none">
+            <div className="flex-1 min-w-0">
+              <StepCard step={step} />
+            </div>
             {index < steps.length - 1 && (
               <div
-                className="hidden xl:flex items-center justify-center text-whitman-navy text-2xl font-bold px-2 shrink-0 self-center"
+                className="flex items-center justify-center text-whitman-navy text-2xl font-bold px-2 shrink-0 self-center"
                 aria-hidden
               >
                 →
-              </div>
-            )}
-            {index < steps.length - 1 && (
-              <div className="flex xl:hidden justify-center py-3 text-whitman-navy text-2xl" aria-hidden>
-                ↓
               </div>
             )}
           </div>

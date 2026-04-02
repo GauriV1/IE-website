@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { documents, DOC_TYPE_LABELS, type DocType } from '@/lib/document-directory-data';
 
 export const metadata: Metadata = {
@@ -41,25 +42,29 @@ export default function ProcessesPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Processes' }]} />
       <h1 className="text-3xl font-bold text-whitman-navy mb-4">Processes</h1>
       <p className="text-lg text-whitman-gray mb-10">
-        Find official policies and step-by-step procedures for division operations. Use the{' '}
-        <Link href="/directory" className="text-whitman-blue hover:underline">A–Z Document Directory</Link> for the full searchable list.
+        This page groups official policies and procedures that appear in the handbook. For a searchable list of all document types (including guides, forms, and references), use the{' '}
+        <Link href="/#directory" className="text-whitman-blue hover:underline">
+          A–Z Document Directory
+        </Link>{' '}
+        on the home page.
       </p>
 
       <section className="mb-12" aria-labelledby="policies-heading">
         <h2 id="policies-heading" className="text-2xl font-semibold text-whitman-navy mb-4 border-b border-whitman-navy pb-2">
-          A. Policies
+          Policies
         </h2>
-        <p className="text-whitman-gray mb-4">Official division and college policies.</p>
+        <p className="text-whitman-gray mb-4">Official division and college policies with brief context in the directory listing.</p>
         <DocList items={policies} />
       </section>
 
       <section aria-labelledby="procedures-heading">
         <h2 id="procedures-heading" className="text-2xl font-semibold text-whitman-navy mb-4 border-b border-whitman-navy pb-2">
-          B. Procedures
+          Procedures
         </h2>
-        <p className="text-whitman-gray mb-4">Step-by-step operational procedures and task guides.</p>
+        <p className="text-whitman-gray mb-4">Step-by-step operational procedures and recurring deadlines.</p>
         <DocList items={procedures} />
       </section>
     </div>

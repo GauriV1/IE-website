@@ -102,12 +102,10 @@ export function getNavigation(): NavigationConfig {
     return {
       main: [
         { label: 'Home', href: '/' },
-        { label: 'Tasks & Services', href: '/tasks' },
-        { label: 'Policies', href: '/policies' },
-        { label: 'Teams', href: '/teams' },
-        { label: 'Tools', href: '/tools' },
-        { label: 'News', href: '/news' },
-        { label: 'Directory', href: '/directory' },
+        { label: 'Onboarding', href: '/onboarding' },
+        { label: 'Processes', href: '/processes' },
+        { label: 'Budget', href: '/budget' },
+        { label: 'Support', href: '/support' },
       ],
     };
   }
