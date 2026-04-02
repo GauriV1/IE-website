@@ -37,7 +37,7 @@ export default function TaskDetailPage({ params }: PageProps) {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[
         { label: 'Home', href: '/' },
-        { label: 'Tasks & Services', href: '/tasks' },
+        { label: 'Processes', href: '/processes' },
         { label: task.frontmatter.title }
       ]} />
 
@@ -132,10 +132,9 @@ export default function TaskDetailPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* Back to tasks */}
       <div className="pt-8 border-t border-gray-200">
-        <Link href="/tasks" className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to Tasks & Services
+        <Link href="/processes" className="text-blue-600 hover:text-blue-800 font-medium">
+          ← Back to Processes
         </Link>
       </div>
     </div>

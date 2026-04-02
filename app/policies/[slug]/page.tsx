@@ -37,7 +37,7 @@ export default function PolicyDetailPage({ params }: PageProps) {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[
         { label: 'Home', href: '/' },
-        { label: 'Policies & Resources', href: '/policies' },
+        { label: 'Processes', href: '/processes' },
         { label: policy.frontmatter.title }
       ]} />
 
@@ -123,10 +123,9 @@ export default function PolicyDetailPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* Back to policies */}
       <div className="pt-8 border-t border-gray-200">
-        <Link href="/policies" className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to Policies & Resources
+        <Link href="/processes" className="text-blue-600 hover:text-blue-800 font-medium">
+          ← Back to Processes
         </Link>
       </div>
     </div>

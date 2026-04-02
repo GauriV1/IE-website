@@ -239,7 +239,7 @@ Funding Sources
 
 Transportation - Liability Waivers
 
-[Travel and Business Expense Policy](https://www.whitman.edu/documents/offices/Business-Office/2024/2024-01-16-whitman-college-travel-and-business-expense-policy.pdf)
+[Travel and Business Expense Policy](/policies/travel-business-expense)
 
 [Travel & Meals](/travel-meals)
 

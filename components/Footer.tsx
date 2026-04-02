@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-whitman-navy text-white mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Division of Inclusive Excellence</h3>
             <p className="text-sm text-gray-200">
@@ -12,41 +12,26 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold text-white mb-4">Handbook</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/policies" className="text-sm text-white hover:text-whitman-gold">
-                  Policies & Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/tasks" className="text-sm text-white hover:text-whitman-gold">
-                  Tasks & Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools" className="text-sm text-white hover:text-whitman-gold">
-                  Tools & Applications
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/help" className="text-sm text-white hover:text-whitman-gold">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-white hover:text-whitman-gold">
-                  Contact Us
-                </Link>
-              </li>
               <li>
                 <Link href="/directory" className="text-sm text-white hover:text-whitman-gold">
-                  Directory
+                  A–Z Document Directory
+                </Link>
+              </li>
+              <li>
+                <Link href="/#flowchart" className="text-sm text-white hover:text-whitman-gold">
+                  Flowchart
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="text-sm text-white hover:text-whitman-gold">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="text-sm text-white hover:text-whitman-gold">
+                  Support
                 </Link>
               </li>
             </ul>
@@ -81,4 +66,3 @@ export default function Footer() {
     </footer>
   );
 }
-
